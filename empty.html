@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+    <style>
+        *:not(code) {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Class 6: Calculate the vote results for NY with Kamala Harris</h1>
+    <h2>Goal: Calculate voting percentage and determine which candidate won and by what margin. It should look like this:</h2>
+    <code>Kamala Harris won New York with 56.4% of the vote, about 13 points more than Donald Trump, who had 43.6%.</code>
+    <h3>Things to keep in mind</h3>
+    <ul>
+        <li>You'll need to format the numbers a bit -- there's a powerful tool called <code>.ToFixed()</code> in Javascript you can use to round numbers</li>
+        <li>You have all the data needed, but you need to figure out which variables to do and how to calculate it</li>
+    </ul>
+     <script>
+        //Votes
+        const kamalaVotes = '4583210';
+        const trumpVotes = '3548552';
+        
+        //Convert the Numbers
+
+        let kamala_converted = Number(kamalaVotes);
+            console.log(kamala_converted);
+
+        let trump_converted = Number(trumpVotes);
+            // console.log(trump_converted);
+
+        //Write a function to calculate the share of votes each candidate got and save it to variables
+
+        let TotalVotes;
+        let kamalaShares;
+        let trumpShares;
+
+
+        function voteShares(){ 
+            TotalVotes = kamala_converted + trump_converted;
+            kamalaShares = (kamala_converted / TotalVotes) * 100;
+            trumpShares = (trump_converted / TotalVotes) * 100;
+
+            let_voteDiff = kamalaShares - trumpShare
+
+            console.log("Kamala Harris won" + " " + kamalaShares.toFixed(2) + "% of votes");
+            console.log("Donald Trump won " + trumpShares.toFixed(2) + "% of votes" );
+
+        }
+
+        voteShares();
+
+        //Write a console.log that prints out a message of the result
+
+        console.log('Kamala Harris won New York with ${KamalaShares}')
+
+
+
+     </script>
+</body>
+</html>
